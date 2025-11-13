@@ -1,0 +1,16 @@
+<section class="py-12">
+      <div class="flex items-center justify-between gap-4 mb-6">
+        <h1 class="text-3xl font-extrabold">Projets</h1>
+      
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <app-project-card *ngFor="let p of svc.filtered()"
+          [title]="p.title"
+          [description]="p.description"
+          [tech]="p.tech"
+          [link]="p.link"
+          [repo]="p.repo"
+          [image]="p.image" />
+      </div>
+    </section>

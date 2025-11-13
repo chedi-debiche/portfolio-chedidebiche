@@ -1,0 +1,38 @@
+  <section class="py-12">
+    <h1 class="text-3xl font-extrabold mb-8">Expériences</h1>
+
+    <ol class="relative border-s border-gray-200 dark:border-white/10">
+      <li *ngFor="let e of svc.items()" class="ms-6 pb-10 last:pb-0">
+        <!-- Dot -->
+        <span class="absolute -start-3 mt-1 h-6 w-6 rounded-full
+                     bg-white dark:bg-gray-900 border border-gray-300 dark:border-white/20
+                     grid place-items-center">
+          <span class="h-3 w-3 rounded-full"
+                style="background-image:linear-gradient(135deg,#ff2d8d 0%,#a855f7 60%,#7c3aed 100%);"></span>
+        </span>
+
+        <!-- Header -->
+        <div class="flex flex-wrap items-center gap-2">
+          <h3 class="text-lg font-semibold">{{ e.role }}</h3>
+          <span class="text-sm opacity-70">— {{ e.company }}</span>
+        </div>
+
+        <div class="text-sm opacity-70 mb-3">
+          {{ e.period }} <span *ngIf="e.location">· {{ e.location }}</span>
+        </div>
+
+        <!-- Details -->
+        <ul class="list-disc ps-5 space-y-1 text-sm mb-3">
+          <li *ngFor="let d of e.details">{{ d }}</li>
+        </ul>
+
+        <!-- Tech badges -->
+        <div class="flex flex-wrap gap-2">
+          <span *ngFor="let t of e.tech"
+                class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-white/10">
+            {{ t }}
+          </span>
+        </div>
+      </li>
+    </ol>
+  </section>

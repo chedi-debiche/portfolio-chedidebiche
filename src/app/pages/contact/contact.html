@@ -1,0 +1,38 @@
+    <section class="py-12 max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-extrabold mb-6">Contact</h2>
+
+      <p class="text-gray-600 dark:text-gray-300 mb-8">
+        N’hésite pas à me contacter ou à visiter mes profils en ligne 👇
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 text-left">
+        <div class="rounded-2xl border p-5 flex flex-col gap-2">
+          <h3 class="font-semibold text-lg mb-2">📞 Coordonnées</h3>
+         <p class="flex items-center gap-2"><lucide-icon [name]="Phone" size="18"/> 06 51 41 60 73</p>
+          <p class="flex items-center gap-2">
+            <lucide-icon [name]="Mail" size="18"/>
+            <a href="mailto:ch.debiche@gmail.com" class="text-brand-pink underline">ch.debiche@gmail.com</a>
+          </p>
+          <p class="flex items-center gap-2"><lucide-icon [name]="MapPin" size="18"/> Île-de-France, France</p>
+        </div>
+
+        <!-- Liens -->
+        <div class="rounded-2xl border p-5 flex flex-col gap-3">
+          <h3 class="font-semibold text-lg mb-2">🌐 Liens</h3>
+
+          <a href="https://www.linkedin.com/in/chedi-debiche" target="_blank" class="flex items-center gap-2 hover:text-brand-pink transition">
+            <lucide-icon [name]="Linkedin" size="18"/> LinkedIn
+          </a>
+
+          <a href="https://github.com/chedi-debiche" target="_blank" class="flex items-center gap-2 hover:text-brand-pink transition">
+            <lucide-icon [name]="Github" size="18"/> GitHub
+          </a>
+
+          <a href="/src/assets/cv.pdf" download class="flex items-center gap-2 hover:text-brand-pink transition">
+            <lucide-icon [name]="FileText" size="18"/> Télécharger mon CV
+          </a>
+        </div>
+      </div>
+
+      <p class="mt-10 opacity-70 text-sm">© 2025 – Chedi Debiche. Tous droits réservés.</p>
+    </section>

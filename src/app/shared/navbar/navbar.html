@@ -1,0 +1,19 @@
+<header class="sticky top-0 z-40 border-b bg-white/80 dark:bg-gray-900/80 backdrop-blur">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between py-3 px-4">
+    <a routerLink="/" class="flex items-center gap-2 font-bold text-lg">
+      <span class="w-6 h-6 rounded bg-ang-gradient inline-block"></span>
+      Chedi Debiche
+    </a>
+
+    <div class="flex items-center gap-6 text-sm">
+    <a routerLink="/home" routerLinkActive="text-brand-pink font-semibold">Home</a>
+    <a routerLink="/about" routerLinkActive="text-brand-pink font-semibold">About</a>
+    <a routerLink="/projects" routerLinkActive="text-brand-pink font-semibold">Projects</a>
+    <a routerLink="/experience" routerLinkActive="text-brand-pink font-semibold">Experience</a>
+    <a routerLink="/contact" routerLinkActive="text-brand-pink font-semibold">Contact</a>
+      <button class="border px-3 py-1 rounded-lg" (click)="toggleTheme()">
+        {{ theme() === 'dark' ? 'Light' : 'Dark' }} mode
+      </button>
+    </div>
+  </nav>
+</header>

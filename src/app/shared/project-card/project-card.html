@@ -1,0 +1,14 @@
+<article class="rounded-2xl border p-4 hover:shadow-md transition bg-white/70 dark:bg-white/5">
+    <img *ngIf="image" [src]="image" [alt]="title" class="rounded-xl mb-3 w-full object-cover">
+    <h3 class="text-lg font-semibold">{{ title }}</h3>
+    <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">{{ description }}</p>
+
+    <ul class="flex flex-wrap gap-2 mb-3">
+      <li *ngFor="let t of tech" class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-white/10">{{ t }}</li>
+    </ul>
+
+    <div class="flex gap-3 text-sm">
+      <a *ngIf="link" [href]="link" target="_blank" class="underline">Live</a>
+      <a *ngIf="repo" [href]="repo" target="_blank" class="underline">Code</a>
+    </div>
+  </article>
