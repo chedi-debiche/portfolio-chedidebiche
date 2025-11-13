@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/chedi-portfolio/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
