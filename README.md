@@ -1,59 +1,48 @@
-# ChediPortfolio
+🌐 Chedi Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
+Portfolio personnel développé avec Angular 18 et TailwindCSS, permettant de présenter mes projets, mes compétences techniques et mon expérience.
+L’application est entièrement responsive, intègre un mode clair/sombre et est déployée sur Firebase Hosting.
 
-## Development server
+🔗 Live Demo : https://chedi-portfolio-5f0ff.firebaseapp.com/home
 
-To start a local development server, run:
+🛠️ Technologies utilisées
 
-```bash
-ng serve
-```
+Angular 18 (standalone components, signals)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+TailwindCSS
 
-## Code scaffolding
+Firebase Hosting
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+✨ Fonctionnalités
 
-```bash
-ng generate component component-name
-```
+Interface moderne et responsive
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Thème clair/sombre
 
-```bash
-ng generate --help
-```
+Section projets dynamique 
 
-## Building
+Composants réutilisables
 
-To build the project run:
+Intégration des images, descriptions, liens GitHub et démos
 
-```bash
-ng build
-```
+🚀 Installation & Exécution
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Installer les dépendances :
 
-## Running unit tests
+npm install
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
 
-```bash
-ng test
-```
+Lancer le serveur local :
 
-## Running end-to-end tests
+ng serve / npm start
 
-For end-to-end (e2e) testing, run:
 
-```bash
-ng e2e
-```
+L’application sera disponible sur :
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+http://localhost:4200
 
-## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+📧 Contact
+
+Chedi Debiche
+Email : ch.debiche@gmail.com
