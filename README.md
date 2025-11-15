@@ -4,7 +4,7 @@
 Portfolio personnel développé avec Angular 18 et TailwindCSS, permettant de présenter mes projets, mes compétences techniques et mon expérience.
 L’application est entièrement responsive, intègre un mode clair/sombre et est déployée sur Firebase Hosting.
 
-🔗 Live Demo : https://chedi-portfolio-5f0ff.firebaseapp.com/home
+🔗 Live Demo : https://chedi-portfolio-5f0ff.firebaseapp.com
 
 🛠️ Technologies utilisées
 
