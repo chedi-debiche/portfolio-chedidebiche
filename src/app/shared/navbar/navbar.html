@@ -36,7 +36,7 @@
        class="md:hidden overflow-hidden transition-[max-height] duration-300"
        [style.maxHeight]="menuOpen() ? '320px' : '0'">
     <div class="px-4 pb-4 flex flex-col gap-3 text-sm border-t">
-      <a routerLink="/home" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="text-brand-pink font-semibold" (click)="closeMenu()">Home</a>
+      <a routerLink="/home"  routerLinkActive="text-brand-pink font-semibold" (click)="closeMenu()">Home</a>
       <a routerLink="/about" routerLinkActive="text-brand-pink font-semibold" (click)="closeMenu()">About</a>
       <a routerLink="/projects" routerLinkActive="text-brand-pink font-semibold" (click)="closeMenu()">Projects</a>
       <a routerLink="/experience" routerLinkActive="text-brand-pink font-semibold" (click)="closeMenu()">Experience</a>
