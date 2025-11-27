@@ -1,19 +1,47 @@
 <header class="sticky top-0 z-40 border-b bg-white/80 dark:bg-gray-900/80 backdrop-blur">
   <nav class="max-w-6xl mx-auto flex items-center justify-between py-3 px-4">
+    <!-- Brand -->
     <a routerLink="/" class="flex items-center gap-2 font-bold text-lg">
       <span class="w-6 h-6 rounded bg-ang-gradient inline-block"></span>
       Chedi Debiche
     </a>
 
-    <div class="flex items-center gap-6 text-sm">
-    <a routerLink="/home" routerLinkActive="text-brand-pink font-semibold">Home</a>
-    <a routerLink="/about" routerLinkActive="text-brand-pink font-semibold">About</a>
-    <a routerLink="/projects" routerLinkActive="text-brand-pink font-semibold">Projects</a>
-    <a routerLink="/experience" routerLinkActive="text-brand-pink font-semibold">Experience</a>
-    <a routerLink="/contact" routerLinkActive="text-brand-pink font-semibold">Contact</a>
+    <!-- Mobile toggle -->
+    <button
+      class="md:hidden inline-flex items-center justify-center rounded-lg border px-3 py-2"
+      (click)="toggleMenu()"
+      aria-label="Toggle navigation"
+      aria-controls="mobile-menu"
+      [attr.aria-expanded]="menuOpen()"
+    >
+      <svg *ngIf="!menuOpen()" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg *ngIf="menuOpen()" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+
+    <!-- Desktop nav -->
+    <div class="hidden md:flex items-center gap-6 text-sm">
+      <a routerLink="/home" routerLinkActive="text-brand-pink font-semibold" [routerLinkActiveOptions]="{exact:true}">Home</a>
+      <a routerLink="/about" routerLinkActive="text-brand-pink font-semibold">About</a>
+      <a routerLink="/projects" routerLinkActive="text-brand-pink font-semibold">Projects</a>
+      <a routerLink="/experience" routerLinkActive="text-brand-pink font-semibold">Experience</a>
+      <a routerLink="/contact" routerLinkActive="text-brand-pink font-semibold">Contact</a>
       <button class="border px-3 py-1 rounded-lg" (click)="toggleTheme()">
         {{ theme() === 'dark' ? 'Light' : 'Dark' }} mode
       </button>
     </div>
   </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu"
+       class="md:hidden overflow-hidden transition-[max-height] duration-300"
+       [style.maxHeight]="menuOpen() ? '320px' : '0'">
+    <div class="px-4 pb-4 flex flex-col gap-3 text-sm border-t">
+      <a routerLink="/home" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="text-brand-pink font-semibold" (click)="closeMenu()">Home</a>
+      <a routerLink="/about" routerLinkActive="text-brand-pink font-semibold" (click)="closeMenu()">About</a>
+      <a routerLink="/projects" routerLinkActive="text-brand-pink font-semibold" (click)="closeMenu()">Projects</a>
+      <a routerLink="/experience" routerLinkActive="text-brand-pink font-semibold" (click)="closeMenu()">Experience</a>
+      <a routerLink="/contact" routerLinkActive="text-brand-pink font-semibold" (click)="closeMenu()">Contact</a>
+      <button class="border px-3 py-2 rounded-lg w-fit" (click)="toggleTheme()">Toggle theme</button>
+    </div>
+  </div>
 </header>

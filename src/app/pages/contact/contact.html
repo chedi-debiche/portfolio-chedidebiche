@@ -1,39 +1,147 @@
-    <section class="py-12 max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-extrabold mb-6">Contact</h2>
+<section class="py-16 max-w-5xl mx-auto px-4">
+  <!-- Header -->
+  <div class="text-center mb-12">
+    <h1 class="text-4xl font-extrabold mb-3">Parlons ensemble 👋</h1>
+    <p class="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+      Toujours ouvert aux opportunités intéressantes et aux collaborations innovantes. 
+      N'hésitez pas à me contacter via les canaux ci-dessous !
+    </p>
+  </div>
 
-      <p class="text-gray-600 dark:text-gray-300 mb-8">
-        N’hésite pas à me contacter ou à visiter mes profils en ligne 👇
-      </p>
+  <!-- Main CTA Section -->
+  <div class="grid md:grid-cols-2 gap-8 mb-12">
+    
+    <!-- Coordonnées -->
+    <div class="rounded-2xl border border-gray-200 dark:border-gray-700 p-8 hover:shadow-lg hover:border-purple-500 transition bg-white dark:bg-gray-800">
+      <h2 class="text-2xl font-extrabold mb-6 flex items-center gap-2">
+        <span>📋</span> Coordonnées
+      </h2>
 
-      <div class="grid md:grid-cols-2 gap-6 text-left">
-        <div class="rounded-2xl border p-5 flex flex-col gap-2">
-          <h3 class="font-semibold text-lg mb-2">📞 Coordonnées</h3>
-         <p class="flex items-center gap-2"><lucide-icon [name]="Phone" size="18"/> 06 51 41 60 73</p>
-          <p class="flex items-center gap-2">
-            <lucide-icon [name]="Mail" size="18"/>
-            <a href="mailto:ch.debiche@gmail.com" class="text-brand-pink underline">ch.debiche@gmail.com</a>
-          </p>
-          <p class="flex items-center gap-2"><lucide-icon [name]="MapPin" size="18"/> Île-de-France, France</p>
-        </div>
+      <div class="space-y-4">
+        <!-- Phone -->
+        <a 
+          href="tel:+33651416073"
+          class="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700/50 transition group"
+        >
+          <div class="p-3 rounded-lg bg-purple-100 dark:bg-purple-900/30 group-hover:bg-purple-200 dark:group-hover:bg-purple-900/50 transition">
+            <lucide-icon [name]="Phone" size="20" class="text-purple-600 dark:text-purple-400"></lucide-icon>
+          </div>
+          <div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Téléphone</p>
+            <p class="font-semibold text-gray-900 dark:text-white">06 51 41 60 73</p>
+          </div>
+        </a>
 
-        <!-- Liens -->
-        <div class="rounded-2xl border p-5 flex flex-col gap-3">
-          <h3 class="font-semibold text-lg mb-2">🌐 Liens</h3>
+        <!-- Email -->
+        <a 
+          href="mailto:ch.debiche@gmail.com"
+          class="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700/50 transition group"
+        >
+          <div class="p-3 rounded-lg bg-blue-100 dark:bg-blue-900/30 group-hover:bg-blue-200 dark:group-hover:bg-blue-900/50 transition">
+            <lucide-icon [name]="Mail" size="20" class="text-blue-600 dark:text-blue-400"></lucide-icon>
+          </div>
+          <div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Email</p>
+            <p class="font-semibold text-gray-900 dark:text-white">ch.debiche@gmail.com</p>
+          </div>
+        </a>
 
-          <a href="https://www.linkedin.com/in/chedi-debiche" target="_blank" class="flex items-center gap-2 hover:text-brand-pink transition">
-            <lucide-icon [name]="Linkedin" size="18"/> LinkedIn
-          </a>
-
-          <a href="https://github.com/chedi-debiche" target="_blank" class="flex items-center gap-2 hover:text-brand-pink transition">
-            <lucide-icon [name]="Github" size="18"/> GitHub
-          </a>
-
-          <a href="/src/assets/cv.pdf" download class="flex items-center gap-2 hover:text-brand-pink transition">
-            <lucide-icon [name]="FileText" size="18"/> Télécharger mon CV
-          </a>
+        <!-- Location -->
+        <div class="flex items-center gap-4 p-4 rounded-lg">
+          <div class="p-3 rounded-lg bg-green-100 dark:bg-green-900/30">
+            <lucide-icon [name]="MapPin" size="20" class="text-green-600 dark:text-green-400"></lucide-icon>
+          </div>
+          <div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Localisation</p>
+            <p class="font-semibold text-gray-900 dark:text-white">Île-de-France, France</p>
+          </div>
         </div>
       </div>
+    </div>
 
-      <p class="mt-10 opacity-70 text-sm">© 2025 – Chedi Debiche. Tous droits réservés.</p>
-      <p>hello test</p>
-    </section>
+    <!-- Réseaux & Actions -->
+    <div class="rounded-2xl border border-gray-200 dark:border-gray-700 p-8 hover:shadow-lg hover:border-purple-500 transition bg-white dark:bg-gray-800">
+      <h2 class="text-2xl font-extrabold mb-6 flex items-center gap-2">
+        <span>🌐</span> Connectez-moi
+      </h2>
+
+      <div class="space-y-3">
+        <!-- LinkedIn -->
+        <a 
+          href="https://www.linkedin.com/in/chedi-debiche"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-between p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition group"
+        >
+          <div class="flex items-center gap-3">
+            <lucide-icon [name]="Linkedin" size="20" class="text-blue-600 dark:text-blue-400 group-hover:scale-110 transition"></lucide-icon>
+            <div>
+              <p class="font-semibold text-gray-900 dark:text-white">LinkedIn</p>
+              <p class="text-xs text-gray-600 dark:text-gray-400">Professionnel & réseau</p>
+            </div>
+          </div>
+          <lucide-icon [name]="ExternalLink" size="16" class="text-gray-400 group-hover:text-purple-600"></lucide-icon>
+        </a>
+
+        <!-- GitHub -->
+        <a 
+          href="https://github.com/chedi-debiche"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-between p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition group"
+        >
+          <div class="flex items-center gap-3">
+            <lucide-icon [name]="Github" size="20" class="text-gray-800 dark:text-gray-300 group-hover:scale-110 transition"></lucide-icon>
+            <div>
+              <p class="font-semibold text-gray-900 dark:text-white">GitHub</p>
+              <p class="text-xs text-gray-600 dark:text-gray-400">Code & projets</p>
+            </div>
+          </div>
+          <lucide-icon [name]="ExternalLink" size="16" class="text-gray-400 group-hover:text-purple-600"></lucide-icon>
+        </a>
+
+        <!-- CV Download -->
+        <a 
+          href="assets/cv_chedi.pdf"
+          download="CV_Chedi_Debiche.pdf"
+          class="flex items-center justify-between p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition group"
+        >
+          <div class="flex items-center gap-3">
+            <lucide-icon [name]="FileText" size="20" class="text-red-600 dark:text-red-400 group-hover:scale-110 transition"></lucide-icon>
+            <div>
+              <p class="font-semibold text-gray-900 dark:text-white">Télécharger mon CV</p>
+              <p class="text-xs text-gray-600 dark:text-gray-400">PDF complet 📄</p>
+            </div>
+          </div>
+          <lucide-icon [name]="ExternalLink" size="16" class="text-gray-400 group-hover:text-purple-600"></lucide-icon>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Secondary CTA -->
+  <div class="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 text-center">
+    <h2 class="text-2xl font-extrabold mb-3">Prêt à collaborer ? 🚀</h2>
+    <p class="text-gray-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+      Que ce soit pour un projet, une opportunité d'emploi, ou simplement discuter de développement web, 
+      je serais ravi d'en parler avec vous !
+    </p>
+    <a 
+      href="mailto:ch.debiche@gmail.com"
+      class="inline-flex px-8 py-3 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-700 transition"
+    >
+      ✉️ M'envoyer un email
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <div class="mt-12 text-center">
+    <p class="text-sm text-gray-600 dark:text-gray-400 mb-1">
+      © 2025 – Chedi Debiche. Tous droits réservés.
+    </p>
+    <p class="text-xs text-gray-500 dark:text-gray-500">
+      Fait avec ❤️ en Angular 18 et Tailwind CSS
+    </p>
+  </div>
+</section>

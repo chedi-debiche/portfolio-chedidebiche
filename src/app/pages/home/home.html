@@ -1,28 +1,166 @@
 <section class="py-16 text-center">
-      <div class="mx-auto max-w-3xl rounded-3xl p-10 text-white"
-           style="background-image:linear-gradient(135deg,#ff2d8d 0%,#a855f7 60%,#7c3aed 100%);">
-        <h1 class="text-4xl md:text-6xl font-extrabold">Chedi Debiche</h1>
-        <p class="mt-3 text-lg opacity-90">Développeur Full-Stack • Angular • Node.js</p>
-        <div class="mt-6 flex gap-3 justify-center">
-          <a routerLink="/projects" class="inline-flex px-4 py-2 rounded-xl bg-white text-gray-900 border">Voir mes projets</a>
-          <a routerLink="/experience" class="inline-flex px-4 py-2 rounded-xl border text-white">Expériences</a>
-        </div>
+  <div class="mx-auto max-w-3xl rounded-3xl p-10 text-white"
+       style="background-image:linear-gradient(135deg,#ff2d8d 0%,#a855f7 60%,#7c3aed 100%);">
+    <h1 class="text-4xl md:text-6xl font-extrabold">Chedi Debiche</h1>
+    <p class="mt-3 text-lg opacity-90">Développeur Full-Stack • Angular • Spring Boot • Node.js</p>
+    <p class="mt-2 text-sm opacity-80">Ingénieur en Informatique | CDI/CDD | Paris, France</p>
+    
+    <div class="mt-8 flex gap-3 justify-center flex-wrap">
+      <a routerLink="/projects" class="inline-flex px-6 py-3 rounded-xl bg-white text-gray-900 font-semibold hover:bg-gray-100 transition">
+        📁 Voir mes projets
+      </a>
+      <a routerLink="/experience" class="inline-flex px-6 py-3 rounded-xl border-2 border-white text-white font-semibold hover:bg-white/10 transition">
+        💼 Expériences
+      </a>
+      <a href="/assets/cv_chedi.pdf" target="_blank" download class="inline-flex px-6 py-3 rounded-xl border-2 border-white text-white font-semibold hover:bg-white/10 transition">
+        📄 Télécharger CV
+      </a>
+     
+    </div>
+
+    <!-- Liens réseaux sociaux -->
+    <div class="mt-6 flex gap-4 justify-center">
+      <a href="https://github.com/chedi-debiche" target="_blank" class="inline-flex items-center gap-2 text-sm opacity-90 hover:opacity-100 transition">
+        🐙 GitHub
+      </a>
+      <a href="https://linkedin.com/in/chedi-debiche" target="_blank" class="inline-flex items-center gap-2 text-sm opacity-90 hover:opacity-100 transition">
+        💼 LinkedIn
+      </a>
+      <a href="mailto:ch.debiche@gmail.com" class="inline-flex items-center gap-2 text-sm opacity-90 hover:opacity-100 transition">
+        ✉️ Me contacter
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Section À Propos / Bio -->
+<section class="py-12 bg-gray-50 dark:bg-gray-900">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-extrabold mb-6">À propos de moi</h2>
+    <p class="text-gray-700 dark:text-gray-300 mb-4 text-lg leading-relaxed">
+      <strong>Ingénieur en Informatique — Développeur Full-Stack</strong> passionné par la création d'applications web performantes, scalables et centrées utilisateur. 
+    </p>
+    <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+      Avec une expérience chez <strong>L'Oréal</strong>, <strong>Argovia</strong> et <strong>Spectrum Consulting</strong>, j'ai développé une expertise solide en <strong>Angular</strong>, <strong>Spring Boot</strong>, et <strong>Node.js</strong>. 
+      Je maîtrise l'architecture full-stack, les méthodologies Agile, et les principes SOLID.
+    </p>
+    <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+      Actuellement en recherche de <strong>CDI/CDD</strong>, je suis mobile sur toute la France et motivé par les défis techniques stimulants où je pourrais progresser personnellement et professionnellement.
+    </p>
+  </div>
+</section>
+
+<!-- Section Compétences - AMÉLIORÉE -->
+<section class="py-12 max-w-6xl mx-auto px-4">
+  <h2 class="text-3xl font-extrabold text-center mb-10">Mes Compétences</h2>
+  
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
+    <!-- Frontend -->
+    <div class="rounded-2xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg transition">
+      <h3 class="font-semibold mb-3 text-lg">🎨 Frontend</h3>
+      <ul class="text-sm space-y-2 text-gray-700 dark:text-gray-300">
+        <li>• <strong>Angular</strong> (17+, 16+, 12)</li>
+        <li>• TypeScript • JavaScript • HTML5</li>
+        <li>• SCSS/CSS3 • Tailwind CSS</li>
+        <li>• RxJS • Reactive Programming</li>
+      </ul>
+    </div>
+
+    <!-- Backend -->
+    <div class="rounded-2xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg transition">
+      <h3 class="font-semibold mb-3 text-lg">⚙️ Backend</h3>
+      <ul class="text-sm space-y-2 text-gray-700 dark:text-gray-300">
+        <li>• <strong>Java • Spring Boot</strong></li>
+        <li>• Spring Security • JWT</li>
+        <li>• <strong>Node.js • Express.js</strong></li>
+        <li>• API REST Design</li>
+      </ul>
+    </div>
+
+    <!-- Bases de Données -->
+    <div class="rounded-2xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg transition">
+      <h3 class="font-semibold mb-3 text-lg">🗄️ Données</h3>
+      <ul class="text-sm space-y-2 text-gray-700 dark:text-gray-300">
+        <li>• <strong>MongoDB</strong> (NoSQL)</li>
+        <li>• MySQL • PostgreSQL</li>
+        <li>• Firebase / Firestore</li>
+        <li>• Architecture base de données</li>
+      </ul>
+    </div>
+
+    <!-- Outils & Collaboration -->
+    <div class="rounded-2xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg transition">
+      <h3 class="font-semibold mb-3 text-lg">🛠️ Outils & DevOps</h3>
+      <ul class="text-sm space-y-2 text-gray-700 dark:text-gray-300">
+        <li>• <strong>Git • GitHub • GitLab</strong></li>
+        <li>• Jira • Confluence</li>
+        <li>• Maven • CI/CD</li>
+        <li>• Docker basics</li>
+      </ul>
+    </div>
+
+    <!-- Méthodologies & Architecture -->
+    <div class="rounded-2xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg transition">
+      <h3 class="font-semibold mb-3 text-lg">📋 Architecture</h3>
+      <ul class="text-sm space-y-2 text-gray-700 dark:text-gray-300">
+        <li>• <strong>Agile • Scrum</strong></li>
+        <li>• SOLID Principles</li>
+        <li>• Design Patterns</li>
+        <li>• Unit Testing</li>
+      </ul>
+    </div>
+
+    <!-- Certifications -->
+    <div class="rounded-2xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg transition">
+      <h3 class="font-semibold mb-3 text-lg">📜 Certifications</h3>
+      <ul class="text-sm space-y-2 text-gray-700 dark:text-gray-300">
+        <li>• Microsoft Certified: Azure Fundamentals</li>
+        <li>• PMI Project Management Ready</li>
+        <li class="pt-2 text-gray-500">Master: Expert en Transformation Digitale</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- Section Stats / Highlights -->
+<section class="py-12 bg-gray-50 dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-extrabold text-center mb-10">En chiffres</h2>
+    <div class="grid md:grid-cols-4 gap-6 text-center">
+      <div>
+        <p class="text-4xl font-extrabold text-purple-600">3+</p>
+        <p class="text-gray-700 dark:text-gray-300 mt-2">Ans d'expérience</p>
       </div>
-    </section>
-    <section>
-      <div class="max-w-3xl mx-auto px-4 text-center">
-        <h2 class="text-2xl font-extrabold mb-4">Bienvenue sur mon portfolio !</h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">
-          Je suis Chedi Debiche, un développeur Full-Stack passionné par la création d'applications web performantes et intuitives. Découvrez mes projets, expériences et compétences ci-dessous.
-        </p>
+      <div>
+        <p class="text-4xl font-extrabold text-purple-600">5+</p>
+        <p class="text-gray-700 dark:text-gray-300 mt-2">Projets livrés</p>
       </div>
-    </section>
-    <section class="grid md:grid-cols-3 gap-6 py-12 max-w-6xl mx-auto px-4">
-      <div class="rounded-2xl border p-5"><h3 class="font-semibold mb-1">Angular</h3><p class="text-sm opacity-75"></p></div>
-      <div class="rounded-2xl border p-5"><h3 class="font-semibold mb-1">Node.js</h3><p class="text-sm opacity-75"></p></div>
-      <div class="rounded-2xl border p-5"><h3 class="font-semibold mb-1">Data/BI</h3><p class="text-sm opacity-75"></p></div>
-            <div class="rounded-2xl border p-5"><h3 class="font-semibold mb-1">Data/BI</h3><p class="text-sm opacity-75"></p></div>
-        <div class="rounded-2xl border p-5"><h3 class="font-semibold mb-1">DevOps</h3><p class="text-sm opacity-75"></p></div>
-        <div class="rounded-2xl border p-5"><h3 class="font-semibold mb-1">Cloud</h3><p class="text-sm opacity-75"></p></div>
-        <h1>hello test</h1>
-    </section>
+      <div>
+        <p class="text-4xl font-extrabold text-purple-600">2</p>
+        <p class="text-gray-700 dark:text-gray-300 mt-2">Certifications</p>
+      </div>
+      <div>
+        <p class="text-4xl font-extrabold text-purple-600">∞</p>
+        <p class="text-gray-700 dark:text-gray-300 mt-2">Passionné 🚀</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section CTA Finale -->
+<section class="py-12 text-center">
+  <h2 class="text-3xl font-extrabold mb-6">Prêt à collaborer ?</h2>
+  <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+    Je suis toujours ouvert aux opportunités intéressantes et aux collaborations innovantes. N'hésitez pas à me contacter !
+  </p>
+  <div class="flex gap-4 justify-center flex-wrap">
+    <a href="mailto:ch.debiche@gmail.com" class="inline-flex px-6 py-3 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-700 transition">
+      📧 Me contacter
+    </a>
+    <a href="https://linkedin.com/in/chedi-debiche" target="_blank" class="inline-flex px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition">
+      💼 LinkedIn
+    </a>
+  </div>
+</section>

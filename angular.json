@@ -16,11 +16,10 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public",
-                "output": "src/assets"
-              }
+              
+                "src/favicon.ico",
+                "src/assets"
+              
             ],
             "styles": [
               "src/styles.css"

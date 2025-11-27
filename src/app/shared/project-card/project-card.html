@@ -1,14 +1,114 @@
-<article class="rounded-2xl border p-4 hover:shadow-md transition bg-white/70 dark:bg-white/5">
-    <img *ngIf="image" [src]="image" [alt]="title" class="rounded-xl mb-3 w-full object-cover">
-    <h3 class="text-lg font-semibold">{{ title }}</h3>
-    <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">{{ description }}</p>
+<article
+  class="rounded-2xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg hover:border-purple-500 transition bg-white dark:bg-gray-800 h-full flex flex-col cursor-pointer group"
+>
+  <!-- Image avec carousel -->
+  @if (project.images && project.images.length > 0) {
+    <div class="relative mb-6 overflow-hidden rounded-xl">
+      <img
+        [src]="project.images[currentIndex]"
+        [alt]="project.title"
+        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+      />
 
-    <ul class="flex flex-wrap gap-2 mb-3">
-      <li *ngFor="let t of tech" class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-white/10">{{ t }}</li>
-    </ul>
+      <!-- Flèches navigation -->
+      @if (project.images.length > 1) {
+        <button
+          type="button"
+          (click)="prev($event)"
+          class="absolute left-2 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full bg-black/60 text-white hover:bg-black/80 transition opacity-0 group-hover:opacity-100"
+        >
+          ‹
+        </button>
 
-    <div class="flex gap-3 text-sm">
-      <a *ngIf="link" [href]="link" target="_blank" class="underline">Live</a>
-      <a *ngIf="repo" [href]="repo" target="_blank" class="underline">Code</a>
+        <button
+          type="button"
+          (click)="next($event)"
+          class="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full bg-black/60 text-white hover:bg-black/80 transition opacity-0 group-hover:opacity-100"
+        >
+          ›
+        </button>
+
+        <!-- Indicateurs -->
+        <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 bg-black/60 px-2 py-1 rounded-full">
+          @for (img of project.images; track $index; let i = $index) {
+            <button
+              type="button"
+              [class.bg-white]="i === currentIndex"
+              [class.bg-gray-400]="i !== currentIndex"
+              class="h-2 w-2 rounded-full transition"
+              (click)="goTo(i, $event)"
+            >
+            </button>
+          }
+        </div>
+      }
     </div>
-  </article>
+  }
+
+  
+  <!-- Titre -->
+  <h3 class="text-lg font-semibold mb-2 line-clamp-2">{{ project.title }}</h3>
+  
+
+
+  <!-- Description -->
+  <p class="text-sm text-gray-600 dark:text-gray-300 mb-4 flex-grow ">
+    {{ project.description }}
+  </p>
+
+  <!-- Technologies -->
+  <div class="mb-4">
+    <ul class="flex flex-wrap gap-2">
+      @for (t of project.tech.slice(0, 4); track t) {
+        <li class="text-xs px-2 py-1 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium">
+          {{ t }}
+        </li>
+      }
+      @if (project.tech.length > 4) {
+        <li class="text-xs px-2 py-1 rounded-md bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 font-medium">
+          +{{ project.tech.length - 4 }}
+        </li>
+      }
+    </ul>
+  </div>
+
+  <!-- Achievements -->
+  @if (project.achievements) {
+    <div class="mb-4 pb-4 border-t border-gray-200 dark:border-gray-700">
+      <ul class="text-xs space-y-1 text-gray-600 dark:text-gray-400">
+        @for (achievement of project.achievements.slice(0, 2); track achievement) {
+          <li class="flex items-start gap-2">
+            <span class="text-green-500 mt-0.5">✓</span>
+            <span>{{ achievement }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+  }
+
+  <!-- Liens action -->
+  <div class="flex gap-3 pt-4 border-t border-gray-200 dark:border-gray-700">
+    @if (project.link) {
+      <a
+        [href]="project.link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex-1 text-center px-3 py-2 rounded-lg bg-purple-600 text-white text-sm font-semibold hover:bg-purple-700 transition"
+        (click)="$event.stopPropagation()"
+      >
+        🌐 Live Demo
+      </a>
+    }
+    @if (project.repo) {
+      <a
+        [href]="project.repo"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex-1 text-center px-3 py-2 rounded-lg border-2 border-purple-600 text-purple-600 dark:text-purple-400 text-sm font-semibold hover:bg-purple-50 dark:hover:bg-purple-900/20 transition"
+        (click)="$event.stopPropagation()"
+      >
+        🐙 Code
+      </a>
+    }
+  </div>
+</article>
